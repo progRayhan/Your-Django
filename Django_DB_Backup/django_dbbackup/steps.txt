@@ -34,3 +34,7 @@ it creates a backup data file
 
 
 write a view in app_1 > api > views.py
+for avoiding "python manage.py dbbackup" command
+
+
+now open this (trial) views-urls & get the backup data

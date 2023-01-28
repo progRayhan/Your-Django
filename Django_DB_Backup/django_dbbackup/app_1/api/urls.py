@@ -1,9 +1,6 @@
-from django.http import HttpResponse
 from django.urls import path
-
-def help(request):
-    return HttpResponse("hello World!")
+from app_1.api.views import trial
 
 urlpatterns = [
-    path('',help)
+    path('',trial)
 ]
