@@ -1,0 +1,36 @@
+install : pip install django-dbbackup
+
+
+install : pip install django-apscheduler
+
+
+INSTALLED_APPS = (
+    # ...
+    'dbbackup',
+    "django_apscheduler",
+)
+
+
+add DBBACKUP_STORAGE in settings.py file
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
+DBBACKUP_STORAGE = 'django.core.files.storage.FileSystemStorage'
+DBBACKUP_STORAGE_OPTIONS = {'location': BASE_DIR/'backup'}
+
+
+in project root folder, create a "backup" folder
+
+
+now run makemigrations & migrate command
+
+
+run command : python manage.py bdbackup
+it creates a backup data file
+
+
+write a view in app_1 > api > views.py
