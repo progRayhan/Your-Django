@@ -38,3 +38,29 @@ for avoiding "python manage.py dbbackup" command
 
 
 now open this (trial) views-urls & get the backup data
+
+
+------------------------------------------------------
+
+now use django-apscheduler
+create a (scheduler) folder inside api folder
+
+create __init__.py file inside "scheduler" folder, for make it packages
+
+
+create "scheduler.py" file inside "scheduler" folder
+
+
+write code inside scheduler.py file
+
+
+add "ready" function inside apps.py file, in app_1 folder
+
+
+run the server
+
+
+---------------------------------------------------------
+
+problem :
+- with empty data - inside database, "django_dbbackup" can't take backup from database
